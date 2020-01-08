@@ -60,20 +60,21 @@ protected:
 
 int main(int argc, char *argv[])
 {
-#ifdef	DEBUG_POINT
+  
+#if DEBUG_CIRCLE	
   Point p1(1.2, 9.8);
   p1.shapeName();
   cout<<p1.getX()<<","<<p1.getY()<<endl;
   p1.set(3.8, 4.6);
   cout<<p1<<endl;
-#elifdef DEBUG_CIRCLE
+#elif DEBUG_CIRCLE
   Circle c1(1.2, 3.4, 5.6);
   cout<<c1.getX()<<","<<c1.getY()<<endl<<c1.getRadius();
   c1.set(2, 4, 5.0);
   c1.shapeName();
   cout<<c1.area()<<endl;
   cout<<c1<<endl;
-#elifdef DEBUG_CYLINDER
+#elif DEBUG_CYLINDER
   Cylinder cy1(2.1, 3.4, 4.6, 6.7);
   cy1.shapeName();
   cout<<"position: "<<cy1.getX()<<","<<cy1.getY()<<endl;
